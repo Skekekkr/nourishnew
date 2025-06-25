@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Nourish</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'nunito': ['Nunito', 'sans-serif'],
+                        'mulish': ['Mulish', 'sans-serif'],
+                        'montserrat': ['Montserrat', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="font-nunito bg-gray-50">
+    <header class="fixed top-0 w-full z-50 bg-white shadow-md">
+        <nav class="max-w-7xl mx-auto px-8 py-6">
+            <div class="grid grid-cols-12 gap-8 items-center">
+                <!-- Logo - 3 columns -->
+                <div class="col-span-3">
+                    <a href="index.html" class="flex items-center">
+                        <img src="assets/nourish-logo.png" alt="Nourish Logo" class="h-20 w-auto transition-transform hover:scale-105">
+                    </a>
+                </div>
+                
+                <!-- Navigation Links - 6 columns -->
+                <div class="col-span-6 flex justify-center">
+                    <div class="flex gap-8">
+                        <a href="order.html" class="font-medium text-black hover:text-gray-600 transition-colors py-2 px-4">Order Now</a>
+                        <a href="dietician.html" class="font-medium text-black hover:text-gray-600 transition-colors py-2 px-4">Find a Dietician</a>
+                        <a href="ai-recipe.html" class="font-medium text-black hover:text-gray-600 transition-colors py-2 px-4">AI Recipe</a>
+                        <a href="about.html" class="font-semibold text-black bg-gray-100 rounded-lg py-2 px-4">About</a>
+                    </div>
+                </div>
+                
+                <!-- Icons - 3 columns -->
+                <div class="col-span-3 flex justify-end gap-6">
+                    <a href="shopping.html" class="p-2 hover:bg-gray-100 rounded-lg transition-colors" title="Shopping Cart">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="w-6 h-6 fill-current">
+                            <path d="M0 24C0 10.7 10.7 0 24 0H69.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"/>
+                        </svg>
+                    </a>
+                    <a href="login.html" class="p-2 hover:bg-gray-100 rounded-lg transition-colors" title="Login">
+                        <img src="assets/user-icon.svg" alt="Login" class="w-6 h-6">
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="pt-32 pb-16">
+        <!-- About Section -->
+        <section class="py-16">
+            <div class="max-w-7xl mx-auto px-8">
+                <!-- Section Header -->
+                <div class="text-center mb-20">
+                    <h1 class="font-montserrat font-bold text-4xl lg:text-5xl text-black mb-6">
+                        About Nourish
+                    </h1>
+                    <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                        Transforming nutrition through technology and expert guidance
+                    </p>
+                </div>
+                
+                <!-- About Content Grid -->
+                <div class="grid grid-cols-12 gap-12 mb-20">
+                    <!-- About Text - 8 columns -->
+                    <div class="col-span-12 lg:col-span-8">
+                        <div class="bg-white rounded-2xl shadow-lg p-8">
+                            <h3 class="font-montserrat font-bold text-2xl text-black mb-6">Our Mission</h3>
+                            <p class="text-lg text-gray-600 leading-relaxed mb-8">
+                                We believe that proper nutrition should be accessible, personalized, and convenient for everyone. Our platform combines the expertise of certified dieticians with cutting-edge AI technology to deliver tailored nutrition solutions.
+                            </p>
+                            
+                            <h3 class="font-montserrat font-bold text-2xl text-black mb-6">What We Offer</h3>
+                            <div class="space-y-4">
+                                <div class="flex items-start">
+                                    <div class="w-2 h-2 bg-black rounded-full mt-3 mr-4 flex-shrink-0"></div>
+                                    <p class="text-lg text-gray-600">Customized meal kits for various dietary needs</p>
+                                </div>
+                                <div class="flex items-start">
+                                    <div class="w-2 h-2 bg-black rounded-full mt-3 mr-4 flex-shrink-0"></div>
+                                    <p class="text-lg text-gray-600">Direct access to certified nutrition professionals</p>
+                                </div>
+                                <div class="flex items-start">
+                                    <div class="w-2 h-2 bg-black rounded-full mt-3 mr-4 flex-shrink-0"></div>
+                                    <p class="text-lg text-gray-600">AI-powered recipe recommendations</p>
+                                </div>
+                                <div class="flex items-start">
+                                    <div class="w-2 h-2 bg-black rounded-full mt-3 mr-4 flex-shrink-0"></div>
+                                    <p class="text-lg text-gray-600">Ongoing support and plan adjustments</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Stats - 4 columns -->
+                    <div class="col-span-12 lg:col-span-4">
+                        <div class="space-y-6">
+                            <div class="bg-white rounded-2xl shadow-lg p-8 text-center">
+                                <div class="text-4xl font-bold text-black mb-2">10,000+</div>
+                                <div class="text-lg text-gray-600">Happy Customers</div>
+                            </div>
+                            <div class="bg-white rounded-2xl shadow-lg p-8 text-center">
+                                <div class="text-4xl font-bold text-black mb-2">50+</div>
+                                <div class="text-lg text-gray-600">Expert Dieticians</div>
+                            </div>
+                            <div class="bg-white rounded-2xl shadow-lg p-8 text-center">
+                                <div class="text-4xl font-bold text-black mb-2">1,000+</div>
+                                <div class="text-lg text-gray-600">Healthy Recipes</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Call to Action -->
+                <div class="text-center">
+                    <div class="bg-black text-white rounded-2xl p-12">
+                        <h3 class="font-montserrat font-bold text-3xl mb-6">Ready to Start Your Nutrition Journey?</h3>
+                        <p class="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+                            Join thousands of people who have transformed their health with personalized nutrition guidance.
+                        </p>
+                        <div class="flex flex-col sm:flex-row gap-6 justify-center">
+                            <a href="order.html" class="bg-white text-black px-8 py-4 rounded-lg font-montserrat font-semibold text-lg hover:bg-gray-100 transform hover:-translate-y-1 transition-all duration-300">
+                                Order Meal Kits
+                            </a>
+                            <a href="dietician.html" class="border-2 border-white text-white px-8 py-4 rounded-lg font-montserrat font-semibold text-lg hover:bg-white hover:text-black transform hover:-translate-y-1 transition-all duration-300">
+                                Consult a Dietician
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-black text-white py-16">
+        <div class="max-w-7xl mx-auto px-8">
+            <div class="grid grid-cols-12 gap-12">
+                <!-- Footer Brand - 4 columns -->
+                <div class="col-span-12 md:col-span-4">
+                    <h3 class="font-montserrat font-bold text-2xl mb-4">Nourish</h3>
+                    <p class="text-gray-300 text-lg">Personalized nutrition made simple</p>
+                </div>
+                
+                <!-- Footer Links - 8 columns (divided into 3 sections) -->
+                <div class="col-span-12 md:col-span-8">
+                    <div class="grid grid-cols-3 gap-8">
+                        <div>
+                            <h4 class="font-montserrat font-semibold text-lg mb-6">Services</h4>
+                            <div class="space-y-3">
+                                <a href="order.html" class="block text-gray-300 hover:text-white transition-colors">Meal Kits</a>
+                                <a href="dietician.html" class="block text-gray-300 hover:text-white transition-colors">Dietician Booking</a>
+                                <a href="ai-recipe.html" class="block text-gray-300 hover:text-white transition-colors">AI Recipes</a>
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="font-montserrat font-semibold text-lg mb-6">Support</h4>
+                            <div class="space-y-3">
+                                <a href="#" class="block text-gray-300 hover:text-white transition-colors">FAQ</a>
+                                <a href="#" class="block text-gray-300 hover:text-white transition-colors">Contact</a>
+                                <a href="#" class="block text-gray-300 hover:text-white transition-colors">Help Center</a>
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="font-montserrat font-semibold text-lg mb-6">Company</h4>
+                            <div class="space-y-3">
+                                <a href="about.html" class="block text-gray-300 hover:text-white transition-colors">About Us</a>
+                                <a href="#" class="block text-gray-300 hover:text-white transition-colors">Privacy Policy</a>
+                                <a href="#" class="block text-gray-300 hover:text-white transition-colors">Terms of Service</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Footer Bottom -->
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center">
+                <p class="text-gray-400">&copy; 2024 Nourish. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 

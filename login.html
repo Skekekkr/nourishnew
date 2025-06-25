@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Nourish</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'nunito': ['Nunito', 'sans-serif'],
+                        'mulish': ['Mulish', 'sans-serif'],
+                        'montserrat': ['Montserrat', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="font-nunito bg-gray-50">
+    <header class="fixed top-0 w-full z-50 bg-white shadow-md">
+        <nav class="max-w-7xl mx-auto px-8 py-6">
+            <div class="grid grid-cols-12 gap-8 items-center">
+                <!-- Logo - 3 columns -->
+                <div class="col-span-3">
+                    <a href="index.html" class="flex items-center">
+                        <img src="assets/nourish-logo.png" alt="Nourish Logo" class="h-20 w-auto transition-transform hover:scale-105">
+                    </a>
+                </div>
+                
+                <!-- Navigation Links - 6 columns -->
+                <div class="col-span-6 flex justify-center">
+                    <div class="flex gap-8">
+                        <a href="order.html" class="font-medium text-black hover:text-gray-600 transition-colors py-2 px-4">Order Now</a>
+                        <a href="dietician.html" class="font-medium text-black hover:text-gray-600 transition-colors py-2 px-4">Find a Dietician</a>
+                        <a href="ai-recipe.html" class="font-medium text-black hover:text-gray-600 transition-colors py-2 px-4">AI Recipe</a>
+                        <a href="about.html" class="font-medium text-black hover:text-gray-600 transition-colors py-2 px-4">About</a>
+                    </div>
+                </div>
+                
+                <!-- Icons - 3 columns -->
+                <div class="col-span-3 flex justify-end gap-6">
+                    <a href="shopping.html" class="p-2 hover:bg-gray-100 rounded-lg transition-colors" title="Shopping Cart">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="w-6 h-6 fill-current">
+                            <path d="M0 24C0 10.7 10.7 0 24 0H69.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"/>
+                        </svg>
+                    </a>
+                    <a href="login.html" class="p-2 bg-gray-100 rounded-lg transition-colors" title="Login">
+                        <img src="assets/user-icon.svg" alt="Login" class="w-6 h-6">
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="pt-32 pb-16 min-h-screen flex items-center">
+        <section class="w-full py-16">
+            <div class="max-w-md mx-auto px-8">
+                <!-- Main Login Container -->
+                <div class="bg-white rounded-2xl shadow-lg p-8">
+                    <!-- Header -->
+                    <div class="text-center mb-8">
+                        <h1 class="font-montserrat font-bold text-3xl text-black mb-4">Welcome to Nourish</h1>
+                        <p class="text-gray-600 text-lg">Sign in to your account or create a new one</p>
+                    </div>
+
+                    <!-- Tab Navigation -->
+                    <div class="flex mb-8 bg-gray-100 rounded-lg p-1">
+                        <button id="signin-tab" class="flex-1 py-3 px-4 text-center font-semibold text-sm bg-white text-black rounded-md shadow-sm transition-all" onclick="showSection('signin')">
+                            Sign In
+                        </button>
+                        <button id="signup-tab" class="flex-1 py-3 px-4 text-center font-semibold text-sm text-gray-600 hover:text-black transition-all" onclick="showSection('signup')">
+                            Sign Up
+                        </button>
+                    </div>
+
+                    <!-- Sign In Section -->
+                    <div id="signin-section" class="auth-section">
+                        <form class="space-y-6">
+                            <div>
+                                <label for="signin-email" class="block text-sm font-semibold text-black mb-2">Email Address</label>
+                                <input type="email" id="signin-email" name="email" required 
+                                       class="w-full px-4 py-3 border border-gray-300 rounded-lg text-sm focus:outline-none focus:border-black focus:ring-2 focus:ring-black focus:ring-opacity-20 transition-colors"
+                                       placeholder="Enter your email">
+                            </div>
+                            
+                            <div>
+                                <label for="signin-password" class="block text-sm font-semibold text-black mb-2">Password</label>
+                                <input type="password" id="signin-password" name="password" required 
+                                       class="w-full px-4 py-3 border border-gray-300 rounded-lg text-sm focus:outline-none focus:border-black focus:ring-2 focus:ring-black focus:ring-opacity-20 transition-colors"
+                                       placeholder="Enter your password">
+                            </div>
+                            
+                            <div class="flex items-center justify-between">
+                                <label class="flex items-center">
+                                    <input type="checkbox" name="remember" class="w-4 h-4 text-black border-gray-300 rounded focus:ring-black">
+                                    <span class="ml-2 text-sm text-gray-600">Remember me</span>
+                                </label>
+                                <button type="button" onclick="showSection('forgot')" class="text-sm text-black font-semibold hover:text-gray-600 transition-colors">
+                                    Forgot Password?
+                                </button>
+                            </div>
+                            
+                            <button type="submit" class="w-full bg-black text-white py-3 px-4 rounded-lg font-semibold text-sm hover:bg-gray-800 transition-colors">
+                                Sign In
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- Sign Up Section -->
+                    <div id="signup-section" class="auth-section hidden">
+                        <form class="space-y-6">
+                            <div>
+                                <label for="signup-name" class="block text-sm font-semibold text-black mb-2">Full Name</label>
+                                <input type="text" id="signup-name" name="name" required 
+                                       class="w-full px-4 py-3 border border-gray-300 rounded-lg text-sm focus:outline-none focus:border-black focus:ring-2 focus:ring-black focus:ring-opacity-20 transition-colors"
+                                       placeholder="Enter your full name">
+                            </div>
+                            
+                            <div>
+                                <label for="signup-email" class="block text-sm font-semibold text-black mb-2">Email Address</label>
+                                <input type="email" id="signup-email" name="email" required 
+                                       class="w-full px-4 py-3 border border-gray-300 rounded-lg text-sm focus:outline-none focus:border-black focus:ring-2 focus:ring-black focus:ring-opacity-20 transition-colors"
+                                       placeholder="Enter your email">
+                            </div>
+                            
+                            <div>
+                                <label for="signup-password" class="block text-sm font-semibold text-black mb-2">Password</label>
+                                <input type="password" id="signup-password" name="password" required 
+                                       class="w-full px-4 py-3 border border-gray-300 rounded-lg text-sm focus:outline-none focus:border-black focus:ring-2 focus:ring-black focus:ring-opacity-20 transition-colors"
+                                       placeholder="Create a password">
+                            </div>
+                            
+                            <div>
+                                <label for="signup-confirm" class="block text-sm font-semibold text-black mb-2">Confirm Password</label>
+                                <input type="password" id="signup-confirm" name="confirm-password" required 
+                                       class="w-full px-4 py-3 border border-gray-300 rounded-lg text-sm focus:outline-none focus:border-black focus:ring-2 focus:ring-black focus:ring-opacity-20 transition-colors"
+                                       placeholder="Confirm your password">
+                            </div>
+                            
+                            <div>
+                                <label class="flex items-start">
+                                    <input type="checkbox" name="terms" required class="w-4 h-4 text-black border-gray-300 rounded focus:ring-black mt-1">
+                                    <span class="ml-2 text-sm text-gray-600">
+                                        I agree to the <a href="#" class="text-black font-semibold hover:text-gray-600 transition-colors">Terms & Conditions</a> and <a href="#" class="text-black font-semibold hover:text-gray-600 transition-colors">Privacy Policy</a>
+                                    </span>
+                                </label>
+                            </div>
+                            
+                            <button type="submit" class="w-full bg-black text-white py-3 px-4 rounded-lg font-semibold text-sm hover:bg-gray-800 transition-colors">
+                                Create Account
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- Forgot Password Section -->
+                    <div id="forgot-section" class="auth-section hidden">
+                        <div class="text-center mb-6">
+                            <h2 class="font-montserrat font-bold text-xl text-black mb-2">Reset Password</h2>
+                            <p class="text-gray-600 text-sm">Enter your email address and we'll send you a link to reset your password.</p>
+                        </div>
+                        
+                        <form class="space-y-6">
+                            <div>
+                                <label for="forgot-email" class="block text-sm font-semibold text-black mb-2">Email Address</label>
+                                <input type="email" id="forgot-email" name="email" required 
+                                       class="w-full px-4 py-3 border border-gray-300 rounded-lg text-sm focus:outline-none focus:border-black focus:ring-2 focus:ring-black focus:ring-opacity-20 transition-colors"
+                                       placeholder="Enter your email">
+                            </div>
+                            
+                            <button type="submit" class="w-full bg-black text-white py-3 px-4 rounded-lg font-semibold text-sm hover:bg-gray-800 transition-colors">
+                                Send Reset Link
+                            </button>
+                            
+                            <button type="button" onclick="showSection('signin')" class="w-full text-black font-semibold py-2 hover:text-gray-600 transition-colors">
+                                Back to Sign In
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Additional Links -->
+                <div class="text-center mt-8">
+                    <p class="text-gray-600 text-sm">
+                        Don't have an account? 
+                        <button onclick="showSection('signup')" class="text-black font-semibold hover:text-gray-600 transition-colors">Sign up here</button>
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-black text-white py-16">
+        <div class="max-w-7xl mx-auto px-8">
+            <div class="text-center">
+                <p class="text-gray-400">&copy; 2024 Nourish. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function showSection(sectionName) {
+            // Hide all sections
+            const sections = document.querySelectorAll('.auth-section');
+            sections.forEach(section => section.classList.add('hidden'));
+            
+            // Remove active styles from all tabs
+            const tabs = document.querySelectorAll('[id$="-tab"]');
+            tabs.forEach(tab => {
+                tab.classList.remove('bg-white', 'text-black', 'shadow-sm');
+                tab.classList.add('text-gray-600', 'hover:text-black');
+            });
+            
+            // Show selected section
+            const targetSection = document.getElementById(sectionName + '-section');
+            if (targetSection) {
+                targetSection.classList.remove('hidden');
+            }
+            
+            // Update tab styles if it's signin or signup
+            if (sectionName === 'signin' || sectionName === 'signup') {
+                const activeTab = document.getElementById(sectionName + '-tab');
+                if (activeTab) {
+                    activeTab.classList.add('bg-white', 'text-black', 'shadow-sm');
+                    activeTab.classList.remove('text-gray-600', 'hover:text-black');
+                }
+            }
+        }
+
+        // Initialize with signin section visible
+        document.addEventListener('DOMContentLoaded', function() {
+            showSection('signin');
+        });
+    </script>
+</body>
+</html> 
