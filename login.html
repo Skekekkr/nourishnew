@@ -25,27 +25,25 @@
 </head>
 <body class="font-nunito bg-gray-50">
     <header class="fixed top-0 w-full z-50 bg-white shadow-md">
-        <nav class="max-w-7xl mx-auto px-8 py-6">
-            <div class="grid grid-cols-12 gap-8 items-center">
-                <!-- Logo - 3 columns -->
-                <div class="col-span-3">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-8 py-4 sm:py-6">
+            <div class="flex items-center justify-between">
+                <!-- Logo -->
+                <div class="flex-shrink-0">
                     <a href="index.html" class="flex items-center">
-                        <img src="assets/nourish-logo.png" alt="Nourish Logo" class="h-20 w-auto transition-transform hover:scale-105">
+                        <img src="assets/nourish-logo.png" alt="Nourish Logo" class="h-12 sm:h-16 lg:h-20 w-auto transition-transform hover:scale-105">
                     </a>
                 </div>
                 
-                <!-- Navigation Links - 6 columns -->
-                <div class="col-span-6 flex justify-center">
-                    <div class="flex gap-8">
-                        <a href="order.html" class="font-medium text-black hover:text-gray-600 transition-colors py-2 px-4">Order Now</a>
-                        <a href="dietician.html" class="font-medium text-black hover:text-gray-600 transition-colors py-2 px-4">Find a Dietician</a>
-                        <a href="ai-recipe.html" class="font-medium text-black hover:text-gray-600 transition-colors py-2 px-4">AI Recipe</a>
-                        <a href="about.html" class="font-medium text-black hover:text-gray-600 transition-colors py-2 px-4">About</a>
-                    </div>
+                <!-- Desktop Navigation Links -->
+                <div class="hidden lg:flex items-center space-x-8">
+                    <a href="order.html" class="font-medium text-black hover:text-gray-600 transition-colors py-2 px-4">Order Now</a>
+                    <a href="dietician.html" class="font-medium text-black hover:text-gray-600 transition-colors py-2 px-4">Find a Dietician</a>
+                    <a href="ai-recipe.html" class="font-medium text-black hover:text-gray-600 transition-colors py-2 px-4">AI Recipe</a>
+                    <a href="about.html" class="font-medium text-black hover:text-gray-600 transition-colors py-2 px-4">About</a>
                 </div>
                 
-                <!-- Icons - 3 columns -->
-                <div class="col-span-3 flex justify-end gap-6">
+                <!-- Desktop Icons -->
+                <div class="hidden lg:flex items-center space-x-4">
                     <a href="shopping.html" class="p-2 hover:bg-gray-100 rounded-lg transition-colors" title="Shopping Cart">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="w-6 h-6 fill-current">
                             <path d="M0 24C0 10.7 10.7 0 24 0H69.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"/>
@@ -55,19 +53,46 @@
                         <img src="assets/user-icon.svg" alt="Login" class="w-6 h-6">
                     </a>
                 </div>
+
+                <!-- Mobile Icons & Menu Button -->
+                <div class="flex lg:hidden items-center space-x-2">
+                    <a href="shopping.html" class="p-2 hover:bg-gray-100 rounded-lg transition-colors" title="Shopping Cart">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="w-6 h-6 fill-current">
+                            <path d="M0 24C0 10.7 10.7 0 24 0H69.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"/>
+                        </svg>
+                    </a>
+                    <a href="login.html" class="p-2 bg-gray-100 rounded-lg transition-colors" title="Login">
+                        <img src="assets/user-icon.svg" alt="Login" class="w-6 h-6">
+                    </a>
+                    <button id="mobile-menu-button" class="p-2 hover:bg-gray-100 rounded-lg transition-colors" title="Menu">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Navigation Menu -->
+            <div id="mobile-menu" class="hidden lg:hidden mt-4 pb-4 border-t border-gray-200">
+                <div class="flex flex-col space-y-2 pt-4">
+                    <a href="order.html" class="font-medium text-black hover:text-gray-600 transition-colors py-3 px-4 rounded-lg hover:bg-gray-50">Order Now</a>
+                    <a href="dietician.html" class="font-medium text-black hover:text-gray-600 transition-colors py-3 px-4 rounded-lg hover:bg-gray-50">Find a Dietician</a>
+                    <a href="ai-recipe.html" class="font-medium text-black hover:text-gray-600 transition-colors py-3 px-4 rounded-lg hover:bg-gray-50">AI Recipe</a>
+                    <a href="about.html" class="font-medium text-black hover:text-gray-600 transition-colors py-3 px-4 rounded-lg hover:bg-gray-50">About</a>
+                </div>
             </div>
         </nav>
     </header>
 
-    <main class="pt-32 pb-16 min-h-screen flex items-center">
-        <section class="w-full py-16">
-            <div class="max-w-md mx-auto px-8">
+    <main class="pt-20 sm:pt-24 lg:pt-32 pb-8 sm:pb-16 min-h-screen flex items-center">
+        <section class="w-full py-8 sm:py-16">
+            <div class="max-w-md mx-auto px-4 sm:px-8">
                 <!-- Main Login Container -->
-                <div class="bg-white rounded-2xl shadow-lg p-8">
+                <div class="bg-white rounded-2xl shadow-lg p-6 sm:p-8">
                     <!-- Header -->
-                    <div class="text-center mb-8">
-                        <h1 class="font-montserrat font-bold text-3xl text-black mb-4">Welcome to Nourish</h1>
-                        <p class="text-gray-600 text-lg">Sign in to your account or create a new one</p>
+                    <div class="text-center mb-6 sm:mb-8">
+                        <h1 class="font-montserrat font-bold text-2xl sm:text-3xl text-black mb-3 sm:mb-4">Welcome to Nourish</h1>
+                        <p class="text-gray-600 text-base sm:text-lg">Sign in to your account or create a new one</p>
                     </div>
 
                     <!-- Tab Navigation -->

@@ -25,27 +25,25 @@
 </head>
 <body class="font-nunito bg-white">
     <header class="fixed top-0 w-full z-50 bg-white shadow-md">
-        <nav class="max-w-7xl mx-auto px-8 py-6">
-            <div class="grid grid-cols-12 gap-8 items-center">
-                <!-- Logo - 3 columns -->
-                <div class="col-span-3">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-8 py-4 sm:py-6">
+            <div class="flex items-center justify-between">
+                <!-- Logo -->
+                <div class="flex-shrink-0">
                     <a href="index.html" class="flex items-center">
-                        <img src="assets/nourish-logo.png" alt="Nourish Logo" class="h-20 w-auto transition-transform hover:scale-105">
+                        <img src="assets/nourish-logo.png" alt="Nourish Logo" class="h-12 sm:h-16 lg:h-20 w-auto transition-transform hover:scale-105">
                     </a>
                 </div>
                 
-                <!-- Navigation Links - 6 columns -->
-                <div class="col-span-6 flex justify-center">
-                    <div class="flex gap-8">
-                        <a href="order.html" class="font-medium text-black hover:text-gray-600 transition-colors py-2 px-4">Order Now</a>
-                        <a href="dietician.html" class="font-medium text-black hover:text-gray-600 transition-colors py-2 px-4">Find a Dietician</a>
-                        <a href="ai-recipe.html" class="font-medium text-black hover:text-gray-600 transition-colors py-2 px-4">AI Recipe</a>
-                        <a href="about.html" class="font-medium text-black hover:text-gray-600 transition-colors py-2 px-4">About</a>
-                    </div>
+                <!-- Desktop Navigation Links -->
+                <div class="hidden lg:flex items-center space-x-8">
+                    <a href="order.html" class="font-medium text-black hover:text-gray-600 transition-colors py-2 px-4">Order Now</a>
+                    <a href="dietician.html" class="font-medium text-black hover:text-gray-600 transition-colors py-2 px-4">Find a Dietician</a>
+                    <a href="ai-recipe.html" class="font-medium text-black hover:text-gray-600 transition-colors py-2 px-4">AI Recipe</a>
+                    <a href="about.html" class="font-medium text-black hover:text-gray-600 transition-colors py-2 px-4">About</a>
                 </div>
                 
-                <!-- Icons - 3 columns -->
-                <div class="col-span-3 flex justify-end gap-6">
+                <!-- Desktop Icons -->
+                <div class="hidden lg:flex items-center space-x-4">
                     <a href="shopping.html" class="p-2 hover:bg-gray-100 rounded-lg transition-colors" title="Shopping Cart">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="w-6 h-6 fill-current">
                             <path d="M0 24C0 10.7 10.7 0 24 0H69.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"/>
@@ -55,36 +53,63 @@
                         <img src="assets/user-icon.svg" alt="Login" class="w-6 h-6">
                     </a>
                 </div>
+
+                <!-- Mobile Icons & Menu Button -->
+                <div class="flex lg:hidden items-center space-x-2">
+                    <a href="shopping.html" class="p-2 hover:bg-gray-100 rounded-lg transition-colors" title="Shopping Cart">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="w-6 h-6 fill-current">
+                            <path d="M0 24C0 10.7 10.7 0 24 0H69.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"/>
+                        </svg>
+                    </a>
+                    <a href="login.html" class="p-2 hover:bg-gray-100 rounded-lg transition-colors" title="Login">
+                        <img src="assets/user-icon.svg" alt="Login" class="w-6 h-6">
+                    </a>
+                    <button id="mobile-menu-button" class="p-2 hover:bg-gray-100 rounded-lg transition-colors" title="Menu">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Navigation Menu -->
+            <div id="mobile-menu" class="hidden lg:hidden mt-4 pb-4 border-t border-gray-200">
+                <div class="flex flex-col space-y-2 pt-4">
+                    <a href="order.html" class="font-medium text-black hover:text-gray-600 transition-colors py-3 px-4 rounded-lg hover:bg-gray-50">Order Now</a>
+                    <a href="dietician.html" class="font-medium text-black hover:text-gray-600 transition-colors py-3 px-4 rounded-lg hover:bg-gray-50">Find a Dietician</a>
+                    <a href="ai-recipe.html" class="font-medium text-black hover:text-gray-600 transition-colors py-3 px-4 rounded-lg hover:bg-gray-50">AI Recipe</a>
+                    <a href="about.html" class="font-medium text-black hover:text-gray-600 transition-colors py-3 px-4 rounded-lg hover:bg-gray-50">About</a>
+                </div>
             </div>
         </nav>
     </header>
 
-    <main class="pt-32">
+    <main class="pt-20 sm:pt-24 lg:pt-32">
         <!-- Hero Section -->
-        <section class="min-h-screen bg-white py-16">
-            <div class="max-w-7xl mx-auto px-8">
-                <div class="grid grid-cols-12 gap-12 items-center min-h-[80vh]">
-                    <!-- Hero Content - 7 columns -->
-                    <div class="col-span-12 lg:col-span-7 text-center lg:text-left">
-                        <h1 class="font-montserrat font-bold text-5xl lg:text-6xl xl:text-7xl text-black mb-8 leading-tight">
+        <section class="min-h-screen bg-white py-8 sm:py-16">
+            <div class="max-w-7xl mx-auto px-4 sm:px-8">
+                <div class="flex flex-col lg:flex-row items-center gap-8 lg:gap-12 min-h-[80vh]">
+                    <!-- Hero Content -->
+                    <div class="flex-1 text-center lg:text-left order-2 lg:order-1">
+                        <h1 class="font-montserrat font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-black mb-6 sm:mb-8 leading-tight">
                             Personalized Nutrition Made Simple
                         </h1>
-                        <p class="text-xl lg:text-2xl text-gray-600 mb-12 leading-relaxed max-w-2xl">
+                        <p class="text-lg sm:text-xl lg:text-2xl text-gray-600 mb-8 sm:mb-12 leading-relaxed max-w-2xl mx-auto lg:mx-0">
                             Discover meal kits tailored to your needs, connect with expert dieticians, and get AI-powered recipe recommendations.
                         </p>
-                        <div class="flex flex-col sm:flex-row gap-6 justify-center lg:justify-start">
-                            <a href="order.html" class="bg-black text-white px-8 py-4 rounded-lg font-montserrat font-semibold text-lg hover:bg-gray-800 transform hover:-translate-y-1 transition-all duration-300 shadow-lg">
+                        <div class="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center lg:justify-start">
+                            <a href="order.html" class="bg-black text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-montserrat font-semibold text-base sm:text-lg hover:bg-gray-800 transform hover:-translate-y-1 transition-all duration-300 shadow-lg">
                                 Order Now
                             </a>
-                            <a href="ai-recipe.html" class="border-2 border-black text-black px-8 py-4 rounded-lg font-montserrat font-semibold text-lg hover:bg-black hover:text-white transform hover:-translate-y-1 transition-all duration-300">
+                            <a href="ai-recipe.html" class="border-2 border-black text-black px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-montserrat font-semibold text-base sm:text-lg hover:bg-black hover:text-white transform hover:-translate-y-1 transition-all duration-300">
                                 Try AI Recipe
                             </a>
                         </div>
                     </div>
                     
-                    <!-- Hero Image - 5 columns -->
-                    <div class="col-span-12 lg:col-span-5 flex justify-center">
-                        <div class="w-full max-w-lg">
+                    <!-- Hero Image -->
+                    <div class="flex-1 flex justify-center order-1 lg:order-2">
+                        <div class="w-full max-w-sm sm:max-w-md lg:max-w-lg">
                             <img src="assets/healthy meal.png" alt="Healthy meal prep with fresh ingredients" class="w-full h-auto">
                         </div>
                     </div>
@@ -93,97 +118,64 @@
         </section>
 
         <!-- Features Overview -->
-        <section class="py-24 bg-white">
-            <div class="max-w-7xl mx-auto px-8">
+        <section class="py-12 sm:py-16 lg:py-24 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-8">
                 <!-- Section Header -->
-                <div class="text-center mb-20">
-                    <h2 class="font-montserrat font-bold text-4xl lg:text-5xl text-black mb-6">
+                <div class="text-center mb-12 sm:mb-16 lg:mb-20">
+                    <h2 class="font-montserrat font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-black mb-4 sm:mb-6">
                         Why Choose Nourish?
                     </h2>
-                    <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    <p class="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto">
                         Everything you need for a healthier lifestyle
                     </p>
                 </div>
                 
                 <!-- Features Grid -->
-                <div class="grid grid-cols-12 gap-8">
-                    <!-- Feature 1 - 4 columns -->
-                    <div class="col-span-12 md:col-span-6 lg:col-span-4">
-                        <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 h-full border border-gray-100">
-                            <h3 class="font-montserrat font-bold text-2xl text-black mb-6">Meal Kits</h3>
-                            <p class="text-gray-600 text-lg mb-8 leading-relaxed">
-                                Fresh, nutritious meal kits delivered to your door with customized plans for every dietary need.
-                            </p>
-                            <a href="order.html" class="inline-block bg-black text-white px-6 py-3 rounded-lg font-semibold hover:bg-gray-800 transition-colors">
-                                Explore Plans
-                            </a>
-                        </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+                    <!-- Feature 1 -->
+                    <div class="bg-white p-6 sm:p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 h-full border border-gray-100">
+                        <h3 class="font-montserrat font-bold text-xl sm:text-2xl text-black mb-4 sm:mb-6">Meal Kits</h3>
+                        <p class="text-gray-600 text-base sm:text-lg mb-6 sm:mb-8 leading-relaxed">
+                            Fresh, nutritious meal kits delivered to your door with customized plans for every dietary need.
+                        </p>
+                        <a href="order.html" class="inline-block bg-black text-white px-5 sm:px-6 py-2.5 sm:py-3 rounded-lg font-semibold text-sm sm:text-base hover:bg-gray-800 transition-colors">
+                            Explore Plans
+                        </a>
                     </div>
                     
-                    <!-- Feature 2 - 4 columns -->
-                    <div class="col-span-12 md:col-span-6 lg:col-span-4">
-                        <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 h-full border border-gray-100">
-                            <h3 class="font-montserrat font-bold text-2xl text-black mb-6">Expert Dieticians</h3>
-                            <p class="text-gray-600 text-lg mb-8 leading-relaxed">
-                                Connect with certified nutrition professionals for personalized guidance and ongoing support.
-                            </p>
-                            <a href="dietician.html" class="inline-block bg-black text-white px-6 py-3 rounded-lg font-semibold hover:bg-gray-800 transition-colors">
-                                Book Consultation
-                            </a>
-                        </div>
+                    <!-- Feature 2 -->
+                    <div class="bg-white p-6 sm:p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 h-full border border-gray-100">
+                        <h3 class="font-montserrat font-bold text-xl sm:text-2xl text-black mb-4 sm:mb-6">Expert Dieticians</h3>
+                        <p class="text-gray-600 text-base sm:text-lg mb-6 sm:mb-8 leading-relaxed">
+                            Connect with certified nutrition professionals for personalized guidance and ongoing support.
+                        </p>
+                        <a href="dietician.html" class="inline-block bg-black text-white px-5 sm:px-6 py-2.5 sm:py-3 rounded-lg font-semibold text-sm sm:text-base hover:bg-gray-800 transition-colors">
+                            Book Consultation
+                        </a>
                     </div>
                     
-                    <!-- Feature 3 - 4 columns -->
-                    <div class="col-span-12 md:col-span-6 lg:col-span-4">
-                        <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 h-full border border-gray-100">
-                            <h3 class="font-montserrat font-bold text-2xl text-black mb-6">AI Recipes</h3>
-                            <p class="text-gray-600 text-lg mb-8 leading-relaxed">
-                                Get personalized recipe recommendations based on your health conditions and dietary preferences.
-                            </p>
-                            <a href="ai-recipe.html" class="inline-block bg-black text-white px-6 py-3 rounded-lg font-semibold hover:bg-gray-800 transition-colors">
-                                Try AI Recipe
-                            </a>
-                        </div>
+                    <!-- Feature 3 -->
+                    <div class="bg-white p-6 sm:p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 h-full border border-gray-100 md:col-span-2 lg:col-span-1">
+                        <h3 class="font-montserrat font-bold text-xl sm:text-2xl text-black mb-4 sm:mb-6">AI Recipes</h3>
+                        <p class="text-gray-600 text-base sm:text-lg mb-6 sm:mb-8 leading-relaxed">
+                            Get personalized recipe recommendations based on your health conditions and dietary preferences.
+                        </p>
+                        <a href="ai-recipe.html" class="inline-block bg-black text-white px-5 sm:px-6 py-2.5 sm:py-3 rounded-lg font-semibold text-sm sm:text-base hover:bg-gray-800 transition-colors">
+                            Try AI Recipe
+                        </a>
                     </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer class="bg-black text-white py-16">
-        <div class="max-w-7xl mx-auto px-8">
-            <div class="grid grid-cols-12 gap-12">
-                <!-- Footer Brand - 3 columns -->
-                <div class="col-span-12 md:col-span-3">
-                    <h3 class="font-montserrat font-bold text-2xl mb-4">Nourish</h3>
-                    <p class="text-gray-300 text-lg">Personalized nutrition made simple</p>
-                </div>
-                
-                <!-- Contact Info - 3 columns -->
-                <div class="col-span-12 md:col-span-3">
-                    <h4 class="font-montserrat font-semibold text-lg mb-6">Contact Us</h4>
-                    <div class="space-y-3 mb-6">
-                        <div class="flex items-center">
-                            <svg class="w-4 h-4 text-gray-400 mr-3" fill="currentColor" viewBox="0 0 20 20">
-                                <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
-                                <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
-                            </svg>
-                            <p class="text-gray-300">nourishdiet.info@gmail.com</p>
-                        </div>
-                        <div class="flex items-center">
-                            <svg class="w-4 h-4 text-gray-400 mr-3" fill="currentColor" viewBox="0 0 20 20">
-                                <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path>
-                            </svg>
-                            <p class="text-gray-300">+852 92078103 (Abby)</p>
-                        </div>
-                        <div class="flex items-center">
-                            <svg class="w-4 h-4 text-gray-400 mr-3" fill="currentColor" viewBox="0 0 20 20">
-                                <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path>
-                            </svg>
-                            <p class="text-gray-300">+852 51109186 (Matthew)</p>
-                        </div>
-                        <p class="text-gray-300">© 2025 Nourish</p>
-                    </div>
+    <footer class="bg-black text-white py-8 sm:py-12 lg:py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-8">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
+                <!-- Footer Brand -->
+                <div class="sm:col-span-2 lg:col-span-1">
+                    <h3 class="font-montserrat font-bold text-xl sm:text-2xl mb-3 sm:mb-4">Nourish</h3>
+                    <p class="text-gray-300 text-base sm:text-lg mb-6">Personalized nutrition made simple</p>
                     
                     <!-- Social Media Icons -->
                     <div class="flex space-x-4">
@@ -210,34 +202,51 @@
                     </div>
                 </div>
                 
-                <!-- Footer Links - 6 columns (divided into 3 sections) -->
-                <div class="col-span-12 md:col-span-6">
-                    <div class="grid grid-cols-3 gap-8">
-                        <div>
-                            <h4 class="font-montserrat font-semibold text-lg mb-6">Services</h4>
-                            <div class="space-y-3">
-                                <a href="order.html" class="block text-gray-300 hover:text-white transition-colors">Meal Kits</a>
-                                <a href="dietician.html" class="block text-gray-300 hover:text-white transition-colors">Dietician Booking</a>
-                                <a href="ai-recipe.html" class="block text-gray-300 hover:text-white transition-colors">AI Recipes</a>
-                            </div>
+                <!-- Services -->
+                <div>
+                    <h4 class="font-montserrat font-semibold text-base sm:text-lg mb-4 sm:mb-6">Services</h4>
+                    <div class="space-y-2 sm:space-y-3">
+                        <a href="order.html" class="block text-gray-300 hover:text-white transition-colors text-sm sm:text-base">Meal Kits</a>
+                        <a href="dietician.html" class="block text-gray-300 hover:text-white transition-colors text-sm sm:text-base">Dietician Booking</a>
+                        <a href="ai-recipe.html" class="block text-gray-300 hover:text-white transition-colors text-sm sm:text-base">AI Recipes</a>
+                    </div>
+                </div>
+                
+                <!-- Support -->
+                <div>
+                    <h4 class="font-montserrat font-semibold text-base sm:text-lg mb-4 sm:mb-6">Support</h4>
+                    <div class="space-y-2 sm:space-y-3">
+                        <a href="#" class="block text-gray-300 hover:text-white transition-colors text-sm sm:text-base">FAQ</a>
+                        <a href="#" class="block text-gray-300 hover:text-white transition-colors text-sm sm:text-base">Contact</a>
+                        <a href="#" class="block text-gray-300 hover:text-white transition-colors text-sm sm:text-base">Help Center</a>
+                    </div>
+                </div>
+                
+                <!-- Contact Info -->
+                <div class="sm:col-span-2 lg:col-span-1">
+                    <h4 class="font-montserrat font-semibold text-base sm:text-lg mb-4 sm:mb-6">Contact Us</h4>
+                    <div class="space-y-2 sm:space-y-3 mb-4 sm:mb-6">
+                        <div class="flex items-center">
+                            <svg class="w-4 h-4 text-gray-400 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
+                                <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
+                            </svg>
+                            <p class="text-gray-300 text-sm sm:text-base break-all">nourishdiet.info@gmail.com</p>
                         </div>
-                        <div>
-                            <h4 class="font-montserrat font-semibold text-lg mb-6">Support</h4>
-                            <div class="space-y-3">
-                                <a href="#" class="block text-gray-300 hover:text-white transition-colors">FAQ</a>
-                                <a href="#" class="block text-gray-300 hover:text-white transition-colors">Contact</a>
-                                <a href="#" class="block text-gray-300 hover:text-white transition-colors">Help Center</a>
-                            </div>
+                        <div class="flex items-center">
+                            <svg class="w-4 h-4 text-gray-400 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path>
+                            </svg>
+                            <p class="text-gray-300 text-sm sm:text-base">+852 92078103 (Abby)</p>
                         </div>
-                        <div>
-                            <h4 class="font-montserrat font-semibold text-lg mb-6">Company</h4>
-                            <div class="space-y-3">
-                                <a href="about.html" class="block text-gray-300 hover:text-white transition-colors">About Us</a>
-                                <a href="#" class="block text-gray-300 hover:text-white transition-colors">Privacy Policy</a>
-                                <a href="#" class="block text-gray-300 hover:text-white transition-colors">Terms of Service</a>
-                            </div>
+                        <div class="flex items-center">
+                            <svg class="w-4 h-4 text-gray-400 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path>
+                            </svg>
+                            <p class="text-gray-300 text-sm sm:text-base">+852 51109186 (Matthew)</p>
                         </div>
                     </div>
+                    <p class="text-gray-400 text-xs sm:text-sm">© 2025 Nourish</p>
                 </div>
             </div>
 
